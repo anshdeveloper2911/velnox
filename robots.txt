@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://velnox-labs.web.app/sitemap.xml
