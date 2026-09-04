@@ -1,0 +1,847 @@
+/* =========================================
+   VELNOX — HOME
+   CLEAN WHITE THEME
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --font-heading: "Manrope", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+}
+
+.home-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    font-family: var(--font-body);
+}
+
+/* =========================================
+   SUBTLE GRID
+========================================= */
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    pointer-events: none;
+}
+
+/* =========================================
+   CENTER CONTENT
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    width: 90%;
+    max-width: 1000px;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+/* Eyebrow */
+
+.hero-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+    font-family: var(--font-mono);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #888888;
+}
+
+/* Heading */
+
+.hero-content h1 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: 0.94;
+
+    letter-spacing: -5px;
+
+    font-weight: 600;
+
+    color: #111111;
+}
+
+.hero-content h1 strong {
+    display: block;
+
+    font-family: var(--font-heading);
+
+    font-weight: 600;
+
+    color: #111111;
+}
+
+/* Changing Text */
+
+.dynamic-text {
+    display: block;
+
+    min-height: 1em;
+
+    margin-top: 10px;
+
+    font-family: var(--font-heading);
+
+    font-style: normal;
+
+    font-weight: 500;
+
+    color: #111111;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+.dynamic-text.changing {
+    opacity: 0;
+
+    transform: translateY(12px);
+}
+
+/* =========================================
+   LINE
+========================================= */
+
+.hero-line {
+    width: 55px;
+    height: 1px;
+
+    margin: 35px auto 20px;
+
+    background: #111111;
+}
+
+/* Description */
+
+.hero-content p {
+    margin: 0;
+
+    font-family: var(--font-mono);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #999999;
+}
+
+/* =========================================
+   CORNER DETAILS
+========================================= */
+
+.hero-corner {
+    position: absolute;
+
+    font-family: var(--font-mono);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #aaaaaa;
+
+    z-index: 3;
+}
+
+.hero-corner-top {
+    top: 90px;
+    left: 5%;
+}
+
+.hero-corner-bottom {
+    bottom: 35px;
+    left: 5%;
+}
+
+/* =========================================
+   SCROLL
+========================================= */
+
+.hero-scroll {
+    position: absolute;
+
+    right: 5%;
+    bottom: 35px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: var(--font-mono);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #999999;
+
+    z-index: 3;
+}
+
+.hero-scroll span {
+    width: 24px;
+    height: 1px;
+
+    background: #111111;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero-content {
+        width: 92%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(43px, 12vw, 70px);
+
+        letter-spacing: -3px;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 22px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .hero-line {
+        margin-top: 28px;
+    }
+
+    .hero-corner-top {
+        top: 82px;
+        left: 4%;
+    }
+
+    .hero-corner-bottom {
+        bottom: 25px;
+        left: 4%;
+    }
+
+    .hero-scroll {
+        right: 4%;
+        bottom: 25px;
+    }
+
+    .hero-grid {
+        background-size: 55px 55px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .hero-content h1 {
+        font-size: 40px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-content p {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================
+   VELNOX — HOME SERVICES SHOWCASE
+========================================= */
+
+.home-services {
+    position: relative;
+
+    width: 100%;
+
+    padding: 120px 6vw 80px;
+
+    background: #07120f;
+
+    color: #ffffff;
+
+    overflow: hidden;
+
+    font-family: var(--font-body);
+}
+
+
+/* =========================================
+   TOP CONTENT
+========================================= */
+
+.services-top {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto 65px;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 80px;
+
+    align-items: end;
+}
+
+
+.services-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 14px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 999px;
+
+    font-family: var(--font-mono);
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #18df8a;
+}
+
+
+.services-heading h2 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(42px, 5.2vw, 76px);
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+
+.services-heading h2 span {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+.services-description {
+    padding-bottom: 5px;
+}
+
+
+.services-description p {
+    max-width: 480px;
+
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* =========================================
+   CARD GRID
+========================================= */
+
+.home-service-grid {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.home-service-card {
+    position: relative;
+
+    min-height: 510px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #111111;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.45s cubic-bezier(.22, 1, .36, 1),
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.home-service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(24, 223, 138, 0.35);
+
+    background: #151515;
+}
+
+
+/* =========================================
+   FEATURED CARD
+========================================= */
+
+.home-service-card.service-card-featured {
+    background: #18df8a;
+
+    border-color: #18df8a;
+
+    color: #07120f;
+}
+
+
+.home-service-card.service-card-featured:hover {
+    background: #20e693;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.service-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.service-card-top h3 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: 21px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.7px;
+
+    font-weight: 500;
+
+    color: #18df8a;
+}
+
+
+.service-card-featured .service-card-top h3 {
+    color: #07120f;
+}
+
+
+/* =========================================
+   CARD ARROW
+========================================= */
+
+.service-card-arrow {
+    flex-shrink: 0;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #18df8a;
+
+    color: #07120f;
+
+    text-decoration: none;
+
+    font-size: 23px;
+
+    transition:
+        transform 0.4s cubic-bezier(.22, 1, .36, 1),
+        background 0.3s ease;
+}
+
+
+.service-card-arrow:hover {
+    transform: rotate(45deg);
+}
+
+
+.service-card-featured .service-card-arrow {
+    background: rgba(7, 18, 15, 0.22);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.home-service-card > p {
+    margin: 20px 0 25px;
+
+    min-height: 75px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    color: rgba(255, 255, 255, 0.58);
+}
+
+
+.service-card-featured > p {
+    color: rgba(7, 18, 15, 0.65);
+}
+
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.service-card-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 210px;
+
+    margin-top: auto;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.service-card-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.28),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+
+.service-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.home-service-card:hover .service-card-image img {
+    transform: scale(1.07);
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.services-bottom {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 35px auto 0;
+
+    padding-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.services-bottom span {
+    font-family: var(--font-mono);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+.services-bottom a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: var(--font-heading);
+
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+}
+
+
+.services-bottom a:hover {
+    color: #18df8a;
+}
+
+
+.services-bottom b {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #18df8a;
+
+    color: #07120f;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.services-bottom a:hover b {
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .home-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-service-card {
+        min-height: 470px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .home-services {
+        padding: 85px 5vw 55px;
+    }
+
+    .services-top {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-bottom: 45px;
+    }
+
+    .services-heading h2 {
+        font-size: clamp(40px, 11vw, 58px);
+
+        letter-spacing: -2px;
+    }
+
+    .services-description p {
+        font-size: 14px;
+    }
+
+    .home-service-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .home-service-card {
+        min-height: 470px;
+
+        padding: 17px;
+    }
+
+    .service-card-image {
+        height: 220px;
+    }
+
+    .services-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .home-services {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .home-service-card {
+        min-height: 440px;
+    }
+
+    .service-card-image {
+        height: 195px;
+    }
+
+}
+
+/* =========================================
+   OVERFLOW FIX
+========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.home-services,
+.home-service-grid,
+.services-top,
+.services-bottom {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.home-service-card {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.home-service-card img {
+    max-width: 100%;
+}
+
+.services-top > *,
+.home-service-grid > * {
+    min-width: 0;
+}

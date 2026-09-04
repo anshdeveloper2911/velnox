@@ -1,0 +1,430 @@
+/* =========================================
+   VELNOX — ABOUT SECTION
+   ========================================= */
+
+.about-section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    color: #111111;
+    padding: 90px 0 150px;
+    overflow: hidden;
+}
+
+.about-container {
+    width: min(1280px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   LABEL
+   ========================================= */
+
+.about-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+    background: #f1f1f1;
+
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: #222;
+
+    margin-bottom: 24px;
+}
+
+.about-label span {
+    width: 6px;
+    height: 6px;
+
+    background: #111;
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.about-title {
+    max-width: 1150px;
+
+    margin: 0 0 65px;
+
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 5.2vw, 76px);
+    font-weight: 500;
+
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+}
+
+.about-title span {
+    color: #777;
+}
+
+
+/* =========================================
+   MAIN GRID
+   ========================================= */
+
+.about-main {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.about-image {
+    position: relative;
+
+    width: 100%;
+    height: 480px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #e9e9e9;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-image:hover img {
+    transform: scale(1.035);
+}
+
+
+/* Green-style accent replaced with VELNOX black */
+
+.about-image-dot {
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    right: 26%;
+    top: 18%;
+
+    background: #111;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.about-content {
+    padding: 35px 0 0 0;
+}
+
+.about-text {
+    max-width: 590px;
+
+    margin: 0 0 25px;
+
+    font-family: var(--font-body);
+    font-size: 19px;
+    font-weight: 400;
+
+    line-height: 1.42;
+
+    letter-spacing: -0.015em;
+
+    color: #4d4d4d;
+}
+
+
+/* =========================================
+   STATS
+   ========================================= */
+
+.about-stats {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.about-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 7px 13px 7px 8px;
+
+    border: 1px solid #dedede;
+    border-radius: 50px;
+
+    background: #fafafa;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.about-stat:hover {
+    background: #f0f0f0;
+    border-color: #cfcfcf;
+    transform: translateY(-2px);
+}
+
+.stat-icon {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.about-stat div:last-child {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.about-stat strong {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #222;
+}
+
+.about-stat span {
+    font-family: var(--font-body);
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* =========================================
+   SCROLL ANIMATION
+   ========================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(55px);
+
+    transition:
+        opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Left image */
+
+.reveal-left {
+    transform: translateX(-70px);
+}
+
+.reveal-left.visible {
+    transform: translateX(0);
+}
+
+
+/* Right content */
+
+.reveal-right {
+    transform: translateX(70px);
+}
+
+.reveal-right.visible {
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   STAGGERED STATS
+   ========================================= */
+
+.about-stat:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.about-stat:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.about-stat:nth-child(3) {
+    transition-delay: 0.19s;
+}
+
+.about-stat:nth-child(4) {
+    transition-delay: 0.26s;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    .about-section {
+        padding: 80px 0 110px;
+    }
+
+    .about-container {
+        width: min(100% - 40px, 1280px);
+    }
+
+    .about-main {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-image {
+        height: 430px;
+    }
+
+    .about-content {
+        padding-top: 0;
+    }
+
+    .about-text {
+        max-width: 700px;
+    }
+
+    .reveal-right {
+        transform: translateY(45px);
+    }
+
+    .reveal-right.visible {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding: 65px 0 90px;
+    }
+
+    .about-container {
+        width: calc(100% - 32px);
+    }
+
+    .about-label {
+        font-size: 9px;
+        margin-bottom: 20px;
+    }
+
+    .about-title {
+        font-size: clamp(39px, 11.5vw, 58px);
+        line-height: 1.02;
+
+        margin-bottom: 42px;
+    }
+
+    .about-image {
+        height: 320px;
+        border-radius: 8px;
+    }
+
+    .about-content {
+        padding: 0;
+    }
+
+    .about-text {
+        font-size: 17px;
+        line-height: 1.48;
+
+        margin-bottom: 20px;
+    }
+
+    .about-stats {
+        gap: 7px;
+    }
+
+    .about-stat {
+        padding: 6px 11px 6px 6px;
+    }
+
+    .stat-icon {
+        width: 23px;
+        height: 23px;
+        font-size: 11px;
+    }
+
+    .about-stat strong {
+        font-size: 12px;
+    }
+
+    .about-stat span {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reveal,
+    .reveal-left,
+    .reveal-right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .about-image img {
+        transition: none;
+    }
+}

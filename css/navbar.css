@@ -1,0 +1,455 @@
+/* =========================================================
+   VELNOX — FLOATING NAVBAR
+   ========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: 9999;
+    font-family: var(--font-body);
+}
+
+.nav-container {
+    width: min(1320px, 100%);
+    min-height: 64px;
+    margin: 0 auto;
+    padding: 7px 10px 7px 28px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background: rgba(246, 246, 246, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.035);
+    border-radius: 999px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.055),
+        0 2px 8px rgba(0, 0, 0, 0.025);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.navbar.scrolled .nav-container {
+    background: rgba(246, 246, 246, 0.98);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.08),
+        0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+
+/* =========================================================
+   VELNOX TEXT LOGO
+   ========================================================= */
+
+.nav-logo {
+    width: 190px;
+    height: 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+    line-height: 1;
+}
+
+.logo-name {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.055em;
+
+    color: #111;
+}
+
+.logo-sub {
+    margin-top: 4px;
+
+    font-family: var(--font-mono);
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   DESKTOP LINKS
+   ========================================================= */
+
+.nav-links {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.nav-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+    padding: 0 17px;
+
+    color: #111;
+    text-decoration: none;
+
+    border-radius: 999px;
+
+    font-size: 15px;
+    font-weight: 450;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.25s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link.active {
+    background: #18df8a;
+    color: #111;
+}
+
+.nav-link.active:hover {
+    background: #18df8a;
+}
+
+
+/* =========================================================
+   RIGHT ACTIONS
+   ========================================================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.nav-contact {
+    height: 44px;
+    padding: 0 21px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #111;
+    border-radius: 999px;
+
+    color: #111;
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 450;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.25s ease;
+}
+
+.nav-contact:hover {
+    background: #111;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   GREEN ARROW
+   ========================================================= */
+
+.nav-arrow {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #18df8a;
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 19px;
+    font-weight: 400;
+
+    transition:
+        transform 0.3s cubic-bezier(.22, 1, .36, 1),
+        background 0.3s ease;
+}
+
+.nav-arrow:hover {
+    transform: rotate(45deg) scale(1.05);
+    background: #12d77f;
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+   ========================================================= */
+
+.nav-menu {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 5px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #111;
+    cursor: pointer;
+}
+
+.nav-menu span {
+    width: 18px;
+    height: 1.5px;
+    background: #fff;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-logo {
+        width: 150px;
+    }
+
+    .nav-link {
+        padding: 0 12px;
+        font-size: 14px;
+    }
+
+    .nav-contact {
+        padding: 0 17px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .navbar {
+        top: 8px;
+        padding: 0 8px;
+    }
+
+    .nav-container {
+        width: 100%;
+        min-height: 58px;
+        padding: 6px 7px 6px 18px;
+    }
+
+    .nav-logo {
+        width: 130px;
+        height: 44px;
+    }
+
+    .logo-name {
+        font-size: 19px;
+    }
+
+    .logo-sub {
+        font-size: 6px;
+        margin-top: 3px;
+    }
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .navbar.menu-open .nav-menu span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .navbar.menu-open .nav-menu span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.menu-open .nav-menu span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+
+    /* MOBILE PANEL */
+
+    .mobile-menu {
+        display: block;
+
+        margin-top: 8px;
+        padding: 20px;
+
+        background: rgba(246, 246, 246, 0.98);
+
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        border-radius: 28px;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.08);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            transform 0.35s cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .navbar.menu-open .mobile-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .mobile-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-link {
+        padding: 15px 12px;
+
+        border-bottom: 1px solid #dedede;
+        border-radius: 12px;
+
+        color: #111;
+        text-decoration: none;
+
+        font-family: var(--font-heading);
+        font-size: 25px;
+        letter-spacing: -0.03em;
+
+        transition: background 0.25s ease;
+    }
+
+    .mobile-link:hover,
+    .mobile-link.active {
+        background: #18df8a;
+    }
+
+    .mobile-contact {
+        margin-top: 18px;
+        min-height: 50px;
+        padding: 0 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border: 1px solid #111;
+        border-radius: 999px;
+
+        color: #111;
+        text-decoration: none;
+
+        font-size: 14px;
+    }
+
+    .mobile-contact span:last-child {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 0 6px;
+    }
+
+    .nav-container {
+        padding-left: 14px;
+    }
+
+    .nav-logo {
+        width: 115px;
+    }
+
+    .logo-name {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .navbar *,
+    .navbar {
+        transition: none !important;
+    }
+}

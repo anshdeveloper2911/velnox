@@ -1,0 +1,324 @@
+/* =========================================================
+   VELNOX — CUSTOMER STORIES
+   ========================================================= */
+
+.trusted-section {
+    width: 100%;
+    overflow: hidden;
+
+    padding: 120px 0 80px;
+
+    background: #ffffff;
+    color: #111;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.trusted-intro {
+    width: min(1280px, 90%);
+    margin: 0 auto 70px;
+}
+
+.trusted-label {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 20px;
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    background: #f0f1ee;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.trusted-label span {
+    font-size: 8px;
+}
+
+.trusted-intro h2 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 5vw, 72px);
+    font-weight: 500;
+
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.trusted-intro h2 span {
+    color: #a2a2a2;
+}
+
+
+/* =========================================================
+   SLIDER
+   ========================================================= */
+
+.trusted-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.trusted-track {
+    width: max-content;
+
+    display: flex;
+    gap: 10px;
+
+    padding-left: 5vw;
+
+    animation: trustedAutoSlide 32s linear infinite;
+}
+
+.trusted-track:hover {
+    animation-play-state: paused;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.trusted-card {
+    width: 365px;
+    min-width: 365px;
+    height: 325px;
+
+    padding: 22px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #f4f4f3;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.trusted-card:hover {
+    transform: translateY(-5px);
+    background: #eeeeec;
+}
+
+
+/* STARS */
+
+.trusted-stars {
+    color: #18df8a;
+
+    font-size: 17px;
+    letter-spacing: 2px;
+
+    line-height: 1;
+}
+
+
+/* CONTENT */
+
+.trusted-card-content {
+    margin-top: 55px;
+}
+
+.trusted-card h3 {
+    margin: 0 0 12px;
+
+    font-family: var(--font-heading);
+    font-size: 21px;
+    font-weight: 700;
+
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.trusted-card p {
+    margin: 0;
+
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.55;
+
+    color: #555;
+}
+
+
+/* AUTHOR */
+
+.trusted-author {
+    margin-top: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.trusted-author strong {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.trusted-author span {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* =========================================================
+   AUTO ANIMATION
+   ========================================================= */
+
+@keyframes trustedAutoSlide {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.trusted-footer {
+    width: min(1280px, 90%);
+    margin: 30px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.trusted-footer > span {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: #888;
+}
+
+.trusted-footer a {
+    min-height: 46px;
+
+    padding: 0 7px 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    border: 1px solid #111;
+    border-radius: 999px;
+
+    color: #111;
+    text-decoration: none;
+
+    font-family: var(--font-body);
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.trusted-footer a b {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #18df8a;
+
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.trusted-footer a:hover {
+    background: #111;
+    color: #fff;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .trusted-section {
+        padding: 90px 0 60px;
+    }
+
+    .trusted-intro {
+        margin-bottom: 50px;
+    }
+
+    .trusted-card {
+        width: 330px;
+        min-width: 330px;
+        height: 310px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .trusted-intro {
+        width: calc(100% - 40px);
+    }
+
+    .trusted-intro h2 {
+        font-size: 43px;
+    }
+
+    .trusted-track {
+        padding-left: 20px;
+    }
+
+    .trusted-card {
+        width: 300px;
+        min-width: 300px;
+        height: 300px;
+    }
+
+    .trusted-card-content {
+        margin-top: 42px;
+    }
+
+    .trusted-footer {
+        width: calc(100% - 40px);
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}

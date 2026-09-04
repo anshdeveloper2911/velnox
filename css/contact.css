@@ -1,0 +1,305 @@
+/* =================================
+   VELNOX CONTACT
+================================= */
+
+.contact-section {
+    width: 100%;
+    padding: 90px 38px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    padding: 75px 40px 55px;
+
+    background: #07120f;
+    color: #fff;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.contact-header {
+    max-width: 760px;
+    padding-bottom: 65px;
+    border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.contact-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 25px;
+
+    color: #18df8a;
+    font-size: 13px;
+}
+
+.contact-label span {
+    width: 7px;
+    height: 7px;
+    background: #18df8a;
+    border-radius: 50%;
+}
+
+.contact-header h2 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(45px, 6vw, 78px);
+    font-weight: 500;
+    line-height: .96;
+    letter-spacing: -.065em;
+}
+
+.contact-header h2 span {
+    color: #858e8a;
+}
+
+.contact-header p {
+    max-width: 580px;
+    margin: 30px 0 0;
+
+    color: #c4cbc8;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.contact-form {
+    padding-top: 55px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-bottom: 32px;
+}
+
+.form-group label {
+    color: #89938e;
+
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 15px 0;
+
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    border-radius: 0;
+
+    outline: none;
+
+    background: transparent;
+    color: #fff;
+
+    font-family: var(--font-body);
+    font-size: 15px;
+
+    box-sizing: border-box;
+
+    transition: border-color .25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #59635f;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #18df8a;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #07120f;
+    color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 125px;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   SUBMIT
+================================= */
+
+.form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-top: 10px;
+}
+
+.form-submit button {
+    min-height: 52px;
+    padding: 0 10px 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    border: 1px solid #18df8a;
+    border-radius: 999px;
+
+    background: #18df8a;
+    color: #07120f;
+
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+.form-submit button b {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #07120f;
+    color: #18df8a;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    transition: transform .3s ease;
+}
+
+.form-submit button:hover {
+    transform: translateY(-2px);
+}
+
+.form-submit button:hover b {
+    transform: rotate(45deg);
+}
+
+.form-submit button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#contact-status {
+    margin: 0;
+
+    color: #18df8a;
+    font-size: 13px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 800px) {
+
+    .contact-section {
+        padding: 60px 20px;
+    }
+
+    .contact-container {
+        padding: 60px 28px 45px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 35px 10px;
+    }
+
+    .contact-container {
+        padding: 45px 20px 35px;
+        border-radius: 8px;
+    }
+
+    .contact-header {
+        padding-bottom: 45px;
+    }
+
+    .contact-header h2 {
+        font-size: clamp(42px, 13vw, 60px);
+    }
+
+    .contact-header p {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        padding-top: 42px;
+    }
+
+    .form-submit {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-submit button {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+}

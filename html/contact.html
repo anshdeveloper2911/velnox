@@ -1,0 +1,154 @@
+<section class="contact-section" id="contact">
+
+    <div class="contact-container">
+
+        <!-- HEADER -->
+        <div class="contact-header">
+
+            <div class="contact-label">
+                <span></span>
+                Contact Us
+            </div>
+
+            <h2>
+                Let's Build
+                <br>
+                <span>Something Great.</span>
+            </h2>
+
+            <p>
+                Have an idea, project, or something you want to build?
+                Tell us about it and let's turn your vision into a
+                digital experience.
+            </p>
+
+        </div>
+
+
+        <!-- FORM -->
+        <form
+            id="velnox-contact-form"
+            class="contact-form"
+            action="https://script.google.com/macros/s/AKfycbyP39aUHsAyOv516Qy91kxDxCrvWHiB01nrNX00E8PsxoGJV81qrHOrZxX6Wpyp-_Uq/exec"
+            method="POST"
+            target="hidden_iframe"
+        >
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="service">What do you need?</label>
+
+                    <select id="service" name="service" required>
+
+                        <option value="" disabled selected>
+                            Select a service
+                        </option>
+
+                        <option value="Web Development">
+                            Web Development
+                        </option>
+
+                        <option value="App Development">
+                            App Development
+                        </option>
+
+                        <option value="UI UX Design">
+                            UI / UX Design
+                        </option>
+
+                        <option value="Graphic Design">
+                            Graphic Design
+                        </option>
+
+                        <option value="Video Editing">
+                            Video Editing
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="form-group form-message">
+
+                <label for="message">Tell us about your project</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Tell us what you're looking to build..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-submit">
+
+                <button
+                    type="submit"
+                    id="contact-submit"
+                >
+                    <span>Send Enquiry</span>
+                    <b>↗</b>
+                </button>
+
+                <p id="contact-status"></p>
+
+            </div>
+
+        </form>
+
+        <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display:none;"
+        ></iframe>
+
+    </div>
+
+</section>
